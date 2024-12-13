@@ -36,6 +36,7 @@ class Scanner:
             self.add_token(TokenType.LEFT_PAREN)
         elif c == ')':
             self.add_token(TokenType.RIGHT_PAREN)
+        # Skip all other characters silently
     
     def advance(self) -> str:
         self.current += 1
@@ -66,9 +67,12 @@ def main():
     scanner = Scanner(file_contents)
     tokens = scanner.scan_tokens()
     
-    # Print tokens in required format
+    # Print with exact spacing required
     for token in tokens:
-        print(f"{token.type.value}  {token.lexeme} {token.literal}")
+        if token.type == TokenType.EOF:
+            print(f"{token.type.value}  {token.lexeme}null")
+        else:
+            print(f"{token.type.value} {token.lexeme} null")
 
 if __name__ == "__main__":
     main()
