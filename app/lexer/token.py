@@ -6,7 +6,7 @@ class TokenType(Enum):
     RIGHT_PAREN = "RIGHT_PAREN"
     LEFT_BRACE = "LEFT_BRACE"
     RIGHT_BRACE = "RIGHT_BRACE"
-    # ...future token types will go here...
+    EOF = "EOF"  # Add EOF token type
 
 class Token:
     def __init__(self, type: TokenType, lexeme: str, literal: object):
