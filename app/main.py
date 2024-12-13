@@ -1,5 +1,5 @@
 import sys
-from lexer import Scanner, Token, TokenType
+from app.lexer import Scanner, Token, TokenType  # Fix: Updated import path
 
 def main():
     # You can use print statements as follows for debugging, they'll be visible when running tests.
@@ -30,3 +30,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -99,6 +99,13 @@ EOF  null
 - Scanner skips unrecognized characters
 - Unbalanced brackets are valid at scanner level
 - Error handling will be added in parsing stage
+- Module imports use either:
+  ```python
+  from app.lexer import Scanner, Token, TokenType  # Option 1
+  # or
+  sys.path.append('.')  # Option 2
+  from lexer import Scanner, Token, TokenType
+  ```
 
 ### Testing
 To run tests:
