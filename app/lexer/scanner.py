@@ -37,7 +37,12 @@ class Scanner:
             self.add_token(TokenType.SEMICOLON)
         elif c == '*':
             self.add_token(TokenType.STAR)
-        # Skip all other characters silently
+        elif c == ' ' or c == '\r' or c == '\t' or c == '\n':
+            # Ignore whitespace
+            pass
+        else:
+            # Handle unexpected characters or errors
+            pass
     
     def is_at_end(self) -> bool:
         return self.current >= len(self.source)
