@@ -25,6 +25,18 @@ class Scanner:
             self.add_token(TokenType.LEFT_BRACE)
         elif c == '}':
             self.add_token(TokenType.RIGHT_BRACE)
+        elif c == ',':
+            self.add_token(TokenType.COMMA)
+        elif c == '.':
+            self.add_token(TokenType.DOT)
+        elif c == '-':
+            self.add_token(TokenType.MINUS)
+        elif c == '+':
+            self.add_token(TokenType.PLUS)
+        elif c == ';':
+            self.add_token(TokenType.SEMICOLON)
+        elif c == '*':
+            self.add_token(TokenType.STAR)
         # Skip all other characters silently
     
     def is_at_end(self) -> bool:

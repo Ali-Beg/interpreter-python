@@ -6,6 +6,12 @@ class TokenType(Enum):
     RIGHT_PAREN = "RIGHT_PAREN"
     LEFT_BRACE = "LEFT_BRACE"
     RIGHT_BRACE = "RIGHT_BRACE"
+    COMMA = "COMMA"
+    DOT = "DOT"
+    MINUS = "MINUS"
+    PLUS = "PLUS"
+    SEMICOLON = "SEMICOLON"
+    STAR = "STAR"
     EOF = "EOF"  # Add EOF token type
 
 class Token:
